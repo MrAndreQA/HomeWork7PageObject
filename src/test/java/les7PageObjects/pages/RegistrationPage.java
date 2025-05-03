@@ -75,7 +75,7 @@ public class RegistrationPage {
         return this;
     }
 
-    public RegistrationPage setHobbies(String value) {  // доработайй
+    public RegistrationPage setHobbies(String value) {
         hobbiesInput.$(byText(value)).click();
         return this;
     }
