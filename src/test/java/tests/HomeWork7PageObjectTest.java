@@ -3,7 +3,7 @@ package tests;
 import les7PageObjects.pages.components.TableWindowComponent;
 import org.junit.jupiter.api.*;
 import les7PageObjects.pages.RegistrationPage;
-import static les7PageObjects.pages.testData.PracticeFormTestData.*;
+import static les7PageObjects.testData.PracticeFormTestData.*;
 
 public class HomeWork7PageObjectTest extends TestBase {
 
@@ -17,13 +17,13 @@ public class HomeWork7PageObjectTest extends TestBase {
                 .setUserEmail(userEmail)
                 .setGender(userGender)
                 .setUserNumber(userNumber)
-                .setDateOfBirth(dayOfBirth, monthOfBirht, yearOfBirth)
-                .setSubject(subjectEnglish)
-                .setHobbies(hobbieReading)
+                .setDateOfBirth(dayOfBirth, monthOfBirth, yearOfBirth)
+                .setSubject(subject)
+                .setHobbies(hobby)
                 .setPicture(pictureFileName)
                 .setCurrentAddress(currentAddress)
-                .setState(stateNcr)
-                .setCity(cityDelhi)
+                .setState(state)
+                .setCity(city)
                 .clickSubmitButton();
                 //*** проверки ***//
                 new TableWindowComponent()
@@ -32,12 +32,12 @@ public class HomeWork7PageObjectTest extends TestBase {
                 .checkResult("Student Email", userEmail)
                 .checkResult("Gender", userGender)
                 .checkResult("Mobile", userNumber)
-                .checkResult("Date of Birth", dayOfBirth + " " + monthOfBirht + "," + yearOfBirth)
-                .checkResult("Subjects", subjectEnglish)
-                .checkResult("Hobbies", hobbieReading)
+                .checkResult("Date of Birth", dayOfBirth + " " + monthOfBirth + "," + yearOfBirth)
+                .checkResult("Subjects", subject)
+                .checkResult("Hobbies", hobby)
                 .checkResult("Picture", pictureFileName)
                 .checkResult("Address", currentAddress)
-                .checkResult("State and City", stateNcr + " " + cityDelhi);
+                .checkResult("State and City", state + " " + city);
     }
 
     @Test
@@ -50,7 +50,7 @@ public class HomeWork7PageObjectTest extends TestBase {
                 .setGender(userGender)
                 .setUserNumber(userNumber)
                 .clickSubmitButton();
-                //*** проверки ***//
+                //*** проверки ***
                 new TableWindowComponent()
                 .checkModalHeader("Thanks for submitting the form")
                 .checkResult("Student Name", firstName + " " + lastName)
@@ -73,7 +73,7 @@ public class HomeWork7PageObjectTest extends TestBase {
                 .setLastName(lastName)
                 .setUserNumber(userNumber)
                 .clickSubmitButton();
-                //*** проверки ***//
+                //*** проверки ***
                 new TableWindowComponent()
                 .checkIsNotVisible_tableWindow();
     }

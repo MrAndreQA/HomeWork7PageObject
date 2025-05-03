@@ -1,7 +1,6 @@
 package les7PageObjects.pages.components;
 
 import com.codeborne.selenide.SelenideElement;
-
 import static com.codeborne.selenide.Condition.*;
 import static com.codeborne.selenide.Selectors.byText;
 import static com.codeborne.selenide.Selenide.*;
