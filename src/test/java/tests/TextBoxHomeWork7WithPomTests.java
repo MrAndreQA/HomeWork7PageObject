@@ -2,7 +2,7 @@ package tests;
 
 import les7PageObjects.pages.TextBoxPage;
 import org.junit.jupiter.api.*;
-import static les7PageObjects.pages.testData.TextBoxTestData.*;
+import static les7PageObjects.testData.TextBoxTestData.*;
 
 public class TextBoxHomeWork7WithPomTests extends TestBase {
 

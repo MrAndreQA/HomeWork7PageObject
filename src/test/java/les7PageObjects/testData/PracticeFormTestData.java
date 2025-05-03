@@ -1,4 +1,4 @@
-package les7PageObjects.pages.testData;
+package les7PageObjects.testData;
 
 public class PracticeFormTestData {
     public final static String userGender = "Male",

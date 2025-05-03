@@ -3,7 +3,7 @@ package tests;
 import les7PageObjects.pages.components.TableWindowComponent;
 import org.junit.jupiter.api.*;
 import les7PageObjects.pages.RegistrationPage;
-import static les7PageObjects.pages.testData.PracticeFormTestData.*;
+import static les7PageObjects.testData.PracticeFormTestData.*;
 
 public class HomeWork7PageObjectTest extends TestBase {
 
