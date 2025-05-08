@@ -1,26 +1,22 @@
 package les7PageObjects.testData;
 
-import com.github.javafaker.Faker;
 import les7PageObjects.utils.RandomUtils;
-import java.util.Locale;
 
 public class PracticeFormTestData {
 
-    static Faker faker = new Faker(new Locale("ru"));
-
-    public static String
-            firstName = faker.name().firstName(),
-            lastName = faker.name().lastName(),
+    public String
+            firstName = RandomUtils.getRandomFirstName(),
+            lastName = RandomUtils.getRandomLastName(),
             userGender = RandomUtils.getRandomGender(),
-            userNumber = faker.number().digits(10),
-            dayOfBirth = String.valueOf(faker.number().numberBetween(1, 28)),
+            userNumber = RandomUtils.getRandomPhone10Digits(),
+            dayOfBirth = RandomUtils.getRandomDayOfBirth(),
             monthOfBirth = RandomUtils.getRandomMonth(),
-            yearOfBirth = String.valueOf(faker.number().numberBetween(1950, 2008)),
-            userEmail = RandomUtils.getRandomEmail(),
+            yearOfBirth = RandomUtils.getRandomYearOfBirth(),
+            userEmail = RandomUtils.generateDefaultEmail(),
             subject = RandomUtils.getRandomSubject(),
             hobby = RandomUtils.getRandomHobby(),
             pictureFileName = RandomUtils.getRandomPicture(),
-            currentAddress = faker.address().fullAddress(),
+            currentAddress = RandomUtils.getFullAddress(),
             state = RandomUtils.getRandomState(),
             city = RandomUtils.getRandomCity();
 }
